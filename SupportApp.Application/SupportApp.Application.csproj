@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="v1\Mentors\**" />
+    <EmbeddedResource Remove="v1\Mentors\**" />
+    <None Remove="v1\Mentors\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SupportApp.Authorization\SupportApp.Authorization.csproj" />
+    <ProjectReference Include="..\SupportApp.Core\SupportApp.Core.csproj" />
+    <ProjectReference Include="..\SupportApp.Data\SupportApp.Data.csproj" />
+    <ProjectReference Include="..\SupportApp.Services\SupportApp.Services.csproj" />
+  </ItemGroup>
+
+</Project>
